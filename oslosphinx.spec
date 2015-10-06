@@ -4,7 +4,7 @@
 #
 Name     : oslosphinx
 Version  : 3.2.0
-Release  : 11
+Release  : 12
 URL      : http://tarballs.openstack.org/oslosphinx/oslosphinx-3.2.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslosphinx/oslosphinx-3.2.0.tar.gz
 Summary  : OpenStack Sphinx Extensions and Theme
