@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+4.3.0
+-----
+
+* Add version and download badges to README
+* Correct project source guessing for OpenStack
+* Updated from global requirements
+
 4.2.0
 -----
 
