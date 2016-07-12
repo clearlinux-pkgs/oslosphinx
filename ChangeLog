@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+4.5.0
+-----
+
+* Subprocess returns bytes in py3
+
+4.4.0
+-----
+
+* Updated from global requirements
+* add recent versions links to sidebar
+
 4.3.0
 -----
 
