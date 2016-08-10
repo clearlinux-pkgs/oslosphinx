@@ -1,10 +1,16 @@
 CHANGES
 =======
 
+4.7.0
+-----
+
+* Allow "Other Versions" section to be configurable
+
 4.6.0
 -----
 
 * Updated from global requirements
+* fix other versions sidebar links
 
 4.5.0
 -----
