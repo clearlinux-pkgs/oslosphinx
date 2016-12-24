@@ -1,0 +1,11 @@
+--- oslosphinx-4.8.0/test-requirements.txt~	2016-10-19 04:41:30.000000000 +0000
++++ oslosphinx-4.8.0/test-requirements.txt	2016-12-24 03:42:10.377969366 +0000
+@@ -2,7 +2,7 @@
+ # of appearance. Changing the order has an impact on the overall integration
+ # process, which may cause wedges in the gate later.
+ 
+-hacking<0.11,>=0.10.0
++hacking<=0.11,>=0.10.0
+ 
+ # this is required for the docs build jobs
+ sphinx!=1.3b1,<1.4,>=1.2.1 # BSD

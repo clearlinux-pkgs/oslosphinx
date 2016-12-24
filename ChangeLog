@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+4.8.0
+-----
+
+* Updated from global requirements
+* Update homepage with developer documentation page
+* Support more notice blocks like important, tip and caution
+* Fixed AttributeError: 'str' object has no attribute 'decode'
+
 4.7.0
 -----
 

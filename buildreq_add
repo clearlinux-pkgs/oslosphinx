@@ -41,3 +41,4 @@ markupsafe-python
 linecache2-python
 pbr-python
 requirements-parser
+Sphinx

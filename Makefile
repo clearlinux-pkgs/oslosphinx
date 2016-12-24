@@ -1,5 +1,5 @@
 PKG_NAME := oslosphinx
-URL := http://tarballs.openstack.org/oslosphinx/oslosphinx-4.7.0.tar.gz
-ARCHIVES :=
+URL := http://tarballs.openstack.org/oslosphinx/oslosphinx-4.8.0.tar.gz
+
 
 include ../common/Makefile.common
