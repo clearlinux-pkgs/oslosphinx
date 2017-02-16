@@ -1,6 +1,20 @@
 CHANGES
 =======
 
+4.10.0
+------
+
+* Remove references to Python 3.4
+* Add Constraints support
+* Updated from global requirements
+* Show team and repo badges on README
+
+4.9.0
+-----
+
+* Updated from global requirements
+* Add reno for release notes management
+
 4.8.0
 -----
 
