@@ -14,7 +14,7 @@ coverage-python
 testtools-python
 testtools
 Sphinx-python
-oslotest-python
+oslotest
 oslosphinx-python
 mock-python
 hacking

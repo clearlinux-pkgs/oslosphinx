@@ -6,7 +6,7 @@
 #
 Name     : oslosphinx
 Version  : 4.10.0
-Release  : 27
+Release  : 28
 URL      : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.10.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.10.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.10.0.tar.gz.asc
@@ -14,6 +14,9 @@ Summary  : OpenStack Sphinx Extensions and Theme
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: oslosphinx-python
+Requires: pbr
+Requires: requests
+Requires: six
 BuildRequires : Babel-python
 BuildRequires : Jinja2
 BuildRequires : Pygments
@@ -24,7 +27,6 @@ BuildRequires : configparser-python
 BuildRequires : coverage-python
 BuildRequires : discover-python
 BuildRequires : docutils-python
-BuildRequires : enum34-python
 BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : fixtures-python
@@ -40,7 +42,7 @@ BuildRequires : oslo.config
 BuildRequires : oslo.context-python
 BuildRequires : oslo.i18n-python
 BuildRequires : oslosphinx-python
-BuildRequires : oslotest-python
+BuildRequires : oslotest
 BuildRequires : pbr
 BuildRequires : pbr-python
 BuildRequires : pep8
@@ -75,9 +77,6 @@ Team and repository tags
 %package python
 Summary: python components for the oslosphinx package.
 Group: Default
-Requires: pbr-python
-Requires: requests-python
-Requires: six-python
 
 %description python
 python components for the oslosphinx package.
@@ -89,12 +88,12 @@ python components for the oslosphinx package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487207025
+export SOURCE_DATE_EPOCH=1489019127
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1487207025
+export SOURCE_DATE_EPOCH=1489019127
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
