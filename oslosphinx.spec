@@ -6,7 +6,7 @@
 #
 Name     : oslosphinx
 Version  : 4.10.0
-Release  : 28
+Release  : 29
 URL      : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.10.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.10.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.10.0.tar.gz.asc
@@ -17,54 +17,11 @@ Requires: oslosphinx-python
 Requires: pbr
 Requires: requests
 Requires: six
-BuildRequires : Babel-python
-BuildRequires : Jinja2
-BuildRequires : Pygments
-BuildRequires : Sphinx
-BuildRequires : Sphinx-python
-BuildRequires : WebOb-python
-BuildRequires : configparser-python
-BuildRequires : coverage-python
-BuildRequires : discover-python
-BuildRequires : docutils-python
-BuildRequires : extras
-BuildRequires : extras-python
-BuildRequires : fixtures-python
-BuildRequires : flake8-python
-BuildRequires : hacking
-BuildRequires : linecache2-python
-BuildRequires : markupsafe-python
-BuildRequires : mccabe-python
-BuildRequires : mock-python
-BuildRequires : mox3-python
-BuildRequires : netaddr-python
-BuildRequires : oslo.config
-BuildRequires : oslo.context-python
-BuildRequires : oslo.i18n-python
-BuildRequires : oslosphinx-python
-BuildRequires : oslotest
 BuildRequires : pbr
-BuildRequires : pbr-python
-BuildRequires : pep8
 BuildRequires : pip
-BuildRequires : pyflakes-python
 BuildRequires : python-dev
-BuildRequires : python-mimeparse-python
-BuildRequires : python-subunit
 BuildRequires : python3-dev
-BuildRequires : pytz-python
-BuildRequires : requests-python
-BuildRequires : requirements-parser
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
-BuildRequires : stevedore
-BuildRequires : testrepository-python
-BuildRequires : testscenarios
-BuildRequires : testtools
-BuildRequires : testtools-python
-BuildRequires : traceback2-python
-BuildRequires : unittest2-python
 Patch1: build.patch
 
 %description
@@ -88,12 +45,12 @@ python components for the oslosphinx package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489019127
+export SOURCE_DATE_EPOCH=1489272928
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1489019127
+export SOURCE_DATE_EPOCH=1489272928
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
