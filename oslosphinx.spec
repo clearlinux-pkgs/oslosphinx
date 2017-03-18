@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xB9069B1335700CDC (infra-root@openstack.org)
 #
 Name     : oslosphinx
-Version  : 4.10.0
-Release  : 29
-URL      : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.10.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.10.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.10.0.tar.gz.asc
+Version  : 4.11.0
+Release  : 30
+URL      : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.11.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.11.0.tar.gz
+Source99 : http://tarballs.openstack.org/oslosphinx/oslosphinx-4.11.0.tar.gz.asc
 Summary  : OpenStack Sphinx Extensions and Theme
 Group    : Development/Tools
 License  : Apache-2.0
@@ -22,7 +22,6 @@ BuildRequires : pip
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
-Patch1: build.patch
 
 %description
 ========================
@@ -40,17 +39,16 @@ python components for the oslosphinx package.
 
 
 %prep
-%setup -q -n oslosphinx-4.10.0
-%patch1 -p1
+%setup -q -n oslosphinx-4.11.0
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489272928
+export SOURCE_DATE_EPOCH=1489854363
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1489272928
+export SOURCE_DATE_EPOCH=1489854363
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -60,4 +58,5 @@ python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*

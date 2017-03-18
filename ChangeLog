@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+4.11.0
+------
+
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Amended dev documentation side navigation
+* add more clear guidelines for when using oslosphinx is appropriate
+* Updated from global requirements
+* Updated from global requirements
+* Use https instead of http for git.openstack.org
+* Update reno for stable/ocata
+
 4.10.0
 ------
 
