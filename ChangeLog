@@ -1,6 +1,52 @@
 CHANGES
 =======
 
+4.18.0
+------
+
+* Remove -U from pip install
+* Avoid tox\_install.sh for constraints support
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+
+4.17.0
+------
+
+
+4.16.0
+------
+
+* Updated from global requirements
+* mark oslosphinx as obsolete
+* Updated from global requirements
+* Update reno for stable/pike
+* Updated from global requirements
+
+4.15.1
+------
+
+* Switch from oslosphinx to openstackdocstheme
+* Updated from global requirements
+
+4.15.0
+------
+
+* Remove pbr warnerrors in favor of sphinx check
+* Updated from global requirements
+
+4.14.0
+------
+
+* Updated from global requirements
+* Fix outdated quantumclient reference
+* Fix intersphinx mapping for neutron
+
+4.13.0
+------
+
+* Fix doc build from tarball using eventlet>0.19.0
+* Updated from global requirements
+
 4.12.0
 ------
 
@@ -82,7 +128,7 @@ CHANGES
 
 * trap errors from git not being present
 * Updated from global requirements
-* Fix a string vs bytes issue in _guess_cgit_link
+* Fix a string vs bytes issue in \_guess\_cgit\_link
 
 4.0.0
 -----
@@ -138,7 +184,7 @@ CHANGES
 * Replace ci.o.o links with docs.o.o/infra
 * Advertise support for Python3.4 / Remove support for Python 3.3
 * Updated from global requirements
-* Remove run_cross_tests.sh
+* Remove run\_cross\_tests.sh
 * Updated from global requirements
 * Remove the unneeded horizontal scrollbar
 * Adds javascript footer for Google Analytics tracking
@@ -153,9 +199,9 @@ CHANGES
 -----
 
 * Allow alternate OpenStack themes
-* Update run_cross_tests.sh to latest
+* Update run\_cross\_tests.sh to latest
 * Add links to the README
-* Add run_cross_tests.sh from incubator
+* Add run\_cross\_tests.sh from incubator
 * Add an extension for validating blueprint names
 * Workflow documentation is now in infra-manual
 
@@ -211,7 +257,7 @@ CHANGES
 ---
 
 * Update build config
-* Add namespace_packages to setup.cfg
+* Add namespace\_packages to setup.cfg
 * Update pbr usage past needing d2to1
 * Remove useless jquery.tweet.js
 * Allow use of hacking 0.6.0 and fix min version
