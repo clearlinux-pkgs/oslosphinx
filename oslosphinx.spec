@@ -6,10 +6,10 @@
 #
 Name     : oslosphinx
 Version  : 4.18.0
-Release  : 40
+Release  : 41
 URL      : https://tarballs.openstack.org/oslosphinx/oslosphinx-4.18.0.tar.gz
 Source0  : https://tarballs.openstack.org/oslosphinx/oslosphinx-4.18.0.tar.gz
-Source99 : https://tarballs.openstack.org/oslosphinx/oslosphinx-4.18.0.tar.gz.asc
+Source1  : https://tarballs.openstack.org/oslosphinx/oslosphinx-4.18.0.tar.gz.asc
 Summary  : OpenStack Sphinx Extensions and Theme
 Group    : Development/Tools
 License  : Apache-2.0
@@ -21,11 +21,27 @@ Requires: requests
 Requires: six
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
+BuildRequires : requests
+BuildRequires : six
 
 %description
 =============================
-OpenStack Sphinx Extensions
+ OpenStack Sphinx Extensions
 =============================
+
+oslosphinx is obsolete. The openstackdocstheme package should be used
+instead. oslosphinx will be maintained for the pike, ocata, and newton
+release series and completely remove after that pike is marked
+end-of-life.
+
+The contents of this repository are still available in the Git source
+code management system.  To see the contents of this repository before
+it reached its end of life, please check out the previous commit with
+"git checkout HEAD^1", or check out one of the supported stable
+branches.
+
+For any further questions, please email
+openstack-dev@lists.openstack.org or join #openstack-oslo on Freenode.
 
 %package license
 Summary: license components for the oslosphinx package.
@@ -48,6 +64,7 @@ python components for the oslosphinx package.
 Summary: python3 components for the oslosphinx package.
 Group: Default
 Requires: python3-core
+Provides: pypi(oslosphinx)
 
 %description python3
 python3 components for the oslosphinx package.
@@ -55,20 +72,28 @@ python3 components for the oslosphinx package.
 
 %prep
 %setup -q -n oslosphinx-4.18.0
+cd %{_builddir}/oslosphinx-4.18.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1551035379
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1583194951
+# -Werror is for werrorists
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslosphinx
-cp LICENSE %{buildroot}/usr/share/package-licenses/oslosphinx/LICENSE
+cp %{_builddir}/oslosphinx-4.18.0/LICENSE %{buildroot}/usr/share/package-licenses/oslosphinx/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -79,7 +104,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/oslosphinx/LICENSE
+/usr/share/package-licenses/oslosphinx/294b43b2cec9919063be1a3b49e8722648424779
 
 %files python
 %defattr(-,root,root,-)
