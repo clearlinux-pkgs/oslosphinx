@@ -6,7 +6,7 @@
 #
 Name     : oslosphinx
 Version  : 4.18.0
-Release  : 41
+Release  : 42
 URL      : https://tarballs.openstack.org/oslosphinx/oslosphinx-4.18.0.tar.gz
 Source0  : https://tarballs.openstack.org/oslosphinx/oslosphinx-4.18.0.tar.gz
 Source1  : https://tarballs.openstack.org/oslosphinx/oslosphinx-4.18.0.tar.gz.asc
